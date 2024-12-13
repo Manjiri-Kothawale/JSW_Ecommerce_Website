@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jsw shop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* style1.css */
+        /* Main styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main.product-details {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px;
+        }
+
+        .product-image img {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            max-width: 600px;
+        }
+
+        .product-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .product-info h3 {
+            margin-top: 20px;
+        }
+
+        .product-info ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .product-actions {
+            margin-top: 20px;
+        }
+
+        .add-to-cart-btn,
+        .buy-now-btn {
+            padding: 10px 20px;
+            background-color: #17469E;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .add-to-cart-btn:hover,
+        .buy-now-btn:hover {
+            background-color: #003087;
+        }
+    </style>
+
+</head>
+<body>
+<header class="header">
+    <img src="logo.png" alt="jsw Logo" />
+
+    <navbar class="nav">
+        <a href="index.html"><b>home</b></a>
+        <a href="index1.html"><b>about</b></a>
+        <a href="projects.html"><b>projects</b></a>
+        <a href="shop.php"><b>shop</b></a>
+        <a href="blogs.html"><b>blogs</b></a>
+        <a href="contactus.html"><b>contact</b></a>
+
+    </navbar>
+
+</header>
+
+<div class="navbar1">
+    <div class="subnav">
+        <button class="subnavbtn">Mild Steel <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="hotrolled.html">Hot rolled</a>
+            <a href="coldrolled.html">Cold rolled</a>
+            <a href="wireroads.html">Wire rods</a>
+            <a href="coated.html">Coated</a>
+            <a href="colourcoated.html">Colour coated</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">Stainless Steel <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="hotrolledsheet.html">Hot rolled sheets</a>
+            <a href="hotrolledcoils.html">Hot rolled coils</a>
+            <a href="coldrolledsheets.html">Cold rolled sheets</a>
+            <a href="coldrolledcoils.html">Cold rolled coils</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">Structural Steel <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="angles.html">Angles</a>
+            <a href="channels.html">Channels</a>
+            <a href="beamsandcolumns.html">Beams and Columns</a>
+        </div>
+    </div>
+    <a href="tmt.html">TMT</a>
+
+
+
+</div>
+
+<div style="padding:20px 16px">
+</div>
+
+
+<main class="product-details">
+    <div class="product-image">
+        <img src="shopimg/featured/1.jpg" alt="">
+    </div>
+    <div class="product-info">
+        <h2>TMT Bars</h2>
+        <h3>Overview</h3>
+        <p>High strength and high ductility TMT rebars suitable for various applications including residential & commercial projects, as well as specialized infrastructure projects like metros, bridges, highways, and earthquake-prone areas due to a high value of percentage elongation.</p>
+        <h3>Product Information</h3>
+        <ul>
+            <li><strong>Brand:</strong> JSW Neosteel</li>
+            <li><strong>Grade:</strong> IS 1786:2008 Fe 550D</li>
+        </ul>
+        <h3>Item Details</h3>
+        <ul>
+            <li><strong>Length:</strong> 12 m</li>
+            <li><strong>Density:</strong> 8.1 g/mm3</li>
+            <li><strong>Packaging:</strong> TMT bars are packaged as both bent and straight bars. Bending and bundling charges are included in the price.</li>
+        </ul>
+        <div class="product-actions">
+            <a href="inquiry.html"><button class="buy-now-btn" id="product1">Inquiry</button></a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        Copyright © JSW 2024 All rights reserved
+        <a class="text-reset fw-bold" href="https://www.jswsteel.in/dolvi-works">jswsteel.in</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<script src="script1.js"></script>
+</body>
+</html>

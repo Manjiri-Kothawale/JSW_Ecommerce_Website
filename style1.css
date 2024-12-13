@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root{
+    --headerclr: #efefef;
+    --mainclr: #17469E;
+    --heading: #ED1C24;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing:border-box;
+    transition: 2s;
+    font-family:Poppins sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 64px;
+    color: var(--heading);
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--heading);
+}
+
+h4 {
+    font-size: 20px;
+    color: var(--mainclr); 
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--mainclr); 
+}
+
+p {
+    font-size: 16px;
+    color: var(--mainclr); 
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    padding: 40px 0;
+}
+body {
+    width: 100%;
+}
+img {
+    width: 80px;
+    height: 50px;
+}
+    html {
+        font-size: 62.5%;
+        overflow: auto; 
+        scroll-behavior: smooth; 
+      }
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding:2rem 7%;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--headerclr);
+    position:fixed;
+    
+   
+    
+}
+.nav a{
+    align-items: center;
+    justify-content: center;
+    color:var(--mainclr);
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    text-decoration: none;
+
+}
+
+
+img{
+  width: 100px;
+  height: 50px;
+}
+.nav a:hover
+{
+    color:rgb(184, 41, 41);
+}
+
+
+.icon-header div{
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;
+    font-size:2rem;
+    cursor:pointer;
+}
+.icon-header div:hover{
+    color:var(--mainclr);
+}
+menu-bar{
+    display: none;
+}
+.nav.active{
+    top:100%;
+}
+.search-form{
+    width:50%;
+    position: absolute;
+    top:-110%;
+    right:2rem;
+    transition: -2s;
+}
+.search-form input{
+    width:100%;
+    padding:1rem;
+   border-radius: 10px;
+   border:1px solid	#17469E;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+    
+.search-form.active{
+    top: 110%;
+    position: center;
+
+}
+
+
+
+/*home css*/
+
+#hero{
+    background-image:url(shopimg/main1.jpg);
+   height: 100vh;
+   width: 100%;
+   background-position: top 25% left 0 ;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  
+  }
+  
+  #hero p{
+      color: var(--headerclr);
+  }
+  #hero button{
+      display: block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: 1px solid #17469E;
+      border-radius: 5px;
+      background-color: #17469E;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      
+  }
+  #hero button:hover{
+      background-color: var(--heading);
+      transition: 0.3s ease;
+      columns: var(--headerclr);
+  }
+  
+  /*our features section css*/
+  #feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
+  }
+  
+  #feature .fe-box {
+      width: 180px;
+      text-align: center;
+      padding: 25px 15px;
+      box-shadow: rgba(0, 0, 0, 0.24) 20px 20px 34px;
+      border: 1px solid var(--mainclr);
+      border-radius: 4px;
+      margin: 15px 0;
+      flex-shrink: 0; 
+  }
+  
+  #feature .fe-box:hover {
+      box-shadow: var(--headerclr) 10px 10px 54px;
+  }
+  
+  #feature .fe-box img {
+      width: 100%;
+      margin-bottom: 10px;
+      width: 100px;
+      height: 80px;
+  }
+  
+  #feature .fe-box h6 {
+      display: inline-block;
+      padding: 9px 8px 6px 8px;
+      line-height: 1;
+      border-radius: 4px;
+      color: var(--headerclr);
+      background-color: var(--mainclr);
+  }
+  
+  
+  
+  /* featured product css*/
+  #product1{
+      text-align: center;
+  }
+  
+  #product1 .pro-container{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      flex-wrap: wrap;
+  }
+  #product1 .pro{
+      width: 350px;
+      height: 390px;
+      padding: 10px 12px ;
+      border:1px soild var(--mainclr);
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+      margin: 15px 0;
+      position: relative;
+  
+  }
+  #product1 .pro:hover{
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.10);
+  }
+  
+  #product1 .pro img{
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+  }
+  #product1 .pro .des{
+      text-align: center;
+      padding: 10px 0;
+  }
+  #product1 .pro .des span{
+      color: var(--mainclr);
+      font-size: 12px;
+  }
+  
+  #product1 .pro .des h5{
+      padding-top: 7px;
+      font-size: 14px;
+      color: black;
+  }
+  
+  
+  #product1 .pro .des .star i{
+      font-size: 12px;
+      color: rgb(243, 181, 25);
+  }
+  #product1 .pro .des h4{
+      padding-top: 7px;
+      font-size: 15px;
+      font-weight: 700;
+      color: black;
+  }
+  #product1 .pro .cart{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50px;
+      background-color: var(--headerclr);
+      font-weight: 500;
+      color: var(--heading);
+      border: 1px solid var(--headerclr);
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+  }
+  
+  
+  /*video section css*/
+  .container {
+      display: flex;
+      height: 100vh; 
+  }
+  
+  .text-section, .video-section {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+  
+  }
+  
+  .text-section {
+      background-color: #f0f0f0;
+      height: 350px;
+    
+  }
+  .text-section h2{
+      color:var(--mainclr);
+  }
+  
+  .text-section p{
+      color: black;
+      font-size: large;
+  }
+  .video-section {
+  background-color: #e0e0e0; 
+  height: 350px;
+  
+  }
+  
+  h2 {
+      margin-top: 0;
+  }
+  
+  /*banner css*/
+  #banner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: aliceblue;
+      width: 100%;
+      height: 40vh;
+      background-size: cover;
+      background-position: center;
+      margin-top: -210px;
+      margin-bottom: 20px;
+  }
+  #banner h4{
+      color: var(--mainclr);
+      font-size: 16px;
+  }
+  #banner h2{
+      color: var(--heading);
+      font-size: 40px;
+      padding: 10px 0;
+  }
+  #banner button{
+      display: block;
+      padding: 8px 16px;
+      border: 1px solid #17469E;
+      border-radius: 5px;
+      background-color: #17469E;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #banner button:hover{
+      background-color: var(--heading);
+      transition: 0.3s ease;
+      columns: var(--headerclr);
+  }
+  
+
+/*navbar css*/
+.navbar1 {
+    overflow: hidden;
+    background-color: var(--headerclr); 
+    height: 50px;
+    margin-top: 100px;
+
+  }
+  
+  .navbar1 a {
+    float: left;
+    font-size: 16px;
+    color: var(--mainclr);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .subnav {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: var(--mainclr);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+  }
+
+  
+  .navbar1 a:hover, .subnav:hover .subnavbtn {
+    background-color: var(--headerclr);
+  }
+  
+  .subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: var(--headerclr);
+    width: 100%;
+    z-index: 1;
+
+  }
+  
+  .subnav-content a {
+    float: left;
+    color: black;
+    text-decoration: none;
+  
+  }
+  
+  .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+  }
+  
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+
+/*shop page css*/
+#page-header{
+    background-image:url(shopimg/Website_banner-07.jpg) ;
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+}
+
+
+/*single product css*/
+#prodetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px ;
+}
+
+
+
+
+
+
+
+
+
+

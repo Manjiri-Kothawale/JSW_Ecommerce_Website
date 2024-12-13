@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsw steels</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+ 
+        :root{
+            --headerclr:#efefef;
+            --mainclr:	#17469E;
+            --heading: #ED1C24;
+        }
+
+
+        body {
+            font-family:Poppins sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background: url(inquiry.jpg);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 40px;
+            color: #ED1C24;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #17469E;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #17469E;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--mainclr);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        input[type="submit"]:hover {
+            background: var(--heading);
+            transition: 0.2s;
+        }
+
+  
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        #thankYouMessage
+        {
+          
+            background: #17469E;
+            box-shadow: none;
+            border: none;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form id="inquiryForm">
+        <h2>Inquiry Form</h2>
+        <p>Please fill in the form below to submit your product enquiry.</p>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        <span class="error-message"></span><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <span class="error-message"></span><br>
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" required>
+        <span class="error-message"></span><br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        <span class="error-message"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message"></span><br>
+
+        <label for="street_address">Street Address:</label>
+        <input type="text" id="street_address" name="street_address" required>
+        <span class="error-message"></span><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <span class="error-message"></span><br>
+
+        <label for="state_province">State/Province:</label>
+        <input type="text" id="state_province" name="state_province" required>
+        <span class="error-message"></span><br>
+
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" name="zipcode" required>
+        <span class="error-message"></span><br>
+
+        <label for="product_of_interest">Product of Interest:</label>
+        <select id="product_of_interest" name="product_of_interest" required>
+            <option value="hot_rolled">Hot Rolled</option>
+            <option value="cold_rolled">Cold Rolled</option>
+            <option value="Wired_rods">Wired Rods</option>
+            <option value="coated">Coated</option>
+            <option value="colour_coated">Colour Coated</option>
+            <option value="hot_rolled_sheets">Hot Rolled Sheets</option>
+            <option value="hot_rolled_coils">Hot Rolled Coils</option>
+            <option value="cold_rolled_sheets">Cold Rolled Sheets</option>
+            <option value="cold_rolled_coils">Cold Rolled Coils</option>
+            <option value="angles">Angles</option>
+            <option value="channels">Channels</option>
+            <option value="beamsandcolumns">Beams and Columns</option>
+        </select><br>
+
+        <label for="additional_comment">Additional Comment:</label><br>
+        <textarea id="additional_comment" name="additional_comment" rows="4" cols="50"></textarea><br>
+
+        <label for="contact_method">Preferred Contact Method:</label><br>
+        <input type="radio" id="contact_method_email" name="contact_method" value="email" checked>
+        <label for="contact_method_email">Email</label><br>
+        <input type="radio" id="contact_method_phone" name="contact_method" value="phone">
+        <label for="contact_method_phone">Phone</label><br>
+
+        <input type="checkbox" id="meeting_request" name="meeting_request">
+        <label for="meeting_request">I would like to schedule a meeting.</label><br>
+
+        <input type="submit" value="Submit Inquiry">
+    </form>
+    <div id="thankYouMessage" style="display: none;">Thank you for your inquiry!</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#inquiryForm').submit(function(event) {
+            event.preventDefault(); 
+
+          
+            var formData = $(this).serialize();
+
+            
+            $.ajax({
+                type: 'POST',
+                url: 'submit_inquiry.php', 
+                data: formData,
+                success: function(response) {
+                    $('#thankYouMessage').show();
+                    setTimeout(function() {
+                        window.location.href = "shop.php";
+                    }, 3000);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

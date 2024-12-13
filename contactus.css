@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root{
+   --headerclr:#efefef;
+    --mainclr:	#17469E;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing:border-box;
+    transition: 2s;
+    font-family:Poppins sans-serif;
+}
+
+    html {
+        font-size: 62.5%;
+        overflow: auto; 
+        scroll-behavior: smooth; 
+      }
+
+.header{
+    padding:2rem 7%;
+    position: fixed;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--headerclr);
+    position:fixed;
+    
+   
+    
+}
+.nav a{
+    color:var(--mainclr);
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+
+img{
+  width: 80px;
+  height: 50px;
+}
+.nav a:hover
+{
+    color:rgb(184, 41, 41);
+}
+
+
+.icon-header div{
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;
+    font-size:2rem;
+    cursor:pointer;
+}
+.icon-header div:hover{
+    color:var(--mainclr);
+}
+menu-bar{
+    display: none;
+}
+.nav.active{
+    top:100%;
+}
+.search-form{
+    width:50%;
+    position: absolute;
+    top:-110%;
+    right:2rem;
+    transition: -2s;
+}
+.search-form input{
+    width:100%;
+    padding:1rem;
+   border-radius: 10px;
+   border:1px solid	#17469E;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+    
+.search-form.active{
+    top: 110%;
+    position: center;
+
+}
+.container img{
+    width: 100%;
+    height: 600px;
+    position:static;
+    margin-top: 100px;
+    position:static;
+    
+}
+.dropdown {
+
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: #ED1C24;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Poppins, sans-serif; 
+    margin-top: 100px;
+
+}
+
+.dropdownoption option{
+    font-size: 18px;
+}
+.form {
+    padding: 2rem; 
+    font-family: Poppins, sans-serif; 
+    font-size: 18px;
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 15px;
+    
+}
+
+.form input[type="submit"] {
+    background-color: #17469E ; 
+    color: #efefef; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: medium;
+}
+
+.form input[type="submit"]:hover {
+    background-color:#efefef;
+    color: #17469E;
+}
+.formheader{
+    color: #ED1C24;
+}
+.textcolor{
+    color: #17469E;
+}
